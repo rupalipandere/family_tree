@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mini Family Tree App</title>
+    <link rel="stylesheet" href="FamilyTree.css" />
+  </head>
+
+  <body>
+    <div class="layout">
+      <h2>Family Members</h2>
+
+      <div class="form-container">
+        <h1>Family Tree</h1>
+        <form id="memberForm">
+          <input type="hidden" id="editIndex" />
+
+          <label>Name:</label>
+          <input type="text" id="name" required />
+
+          <label>Gender:</label>
+          <select id="gender" required>
+            <option value="">-- Select Gender --</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+
+          <label>Date of Birth:</label>
+          <input type="date" id="dob" />
+
+          <label>Father:</label>
+          <select id="father">
+            <option value="">-- Select Father --</option>
+          </select>
+
+          <label>Mother:</label>
+          <select id="mother">
+            <option value="">-- Select Mother --</option>
+          </select>
+
+          <button type="submit">Add Member</button>
+        </form>
+      </div>
+
+      <!-- <div class="tree-card">
+        <h3>Family Hierarchy</h3>
+        <pre id="treeOutput"></pre>
+      </div> -->
+    </div>
+
+    <table id="membersTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>DOB</th>
+          <th>Father</th>
+          <th>Mother</th>
+          <th>Spouse</th>
+          <th>Children</th>
+          <th>Siblings</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="FamilyTree.js"></script>
+  </body>
+</html>
